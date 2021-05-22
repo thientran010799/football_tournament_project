@@ -12,5 +12,4 @@ public class Match {
 
     private LocalDateTime startTime;
 
-    
 }
