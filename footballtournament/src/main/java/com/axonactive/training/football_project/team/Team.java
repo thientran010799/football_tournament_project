@@ -18,17 +18,18 @@ public class Team {
 
     public static final String COMPANY_SOCIAL_INSURANCE_NUMBER = "";
 
+    public static final int MAXIMUN_SIZE = 12;
+
+    public static final int MINIMUN_SIZE = 7;
+
     private String name;
 
     private int score;
 
     private List<Player> players = new ArrayList<>();
 
-    public void addPlayer(Player player) {
-        if (players.size() < 12) {
-            players.add(player);
-        }
-        throw new IllegalArgumentException("Size of team is max");
+    public boolean isEnoughPlayer() {
+        return (this.getPlayers().size() < MINIMUN_SIZE) ;
     }
 
 }
